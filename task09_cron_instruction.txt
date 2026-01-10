@@ -1,0 +1,2 @@
+Add the following line to the crontab (install with crontab -e if you want it):
+*/5 * * * * /tmp/integrated_monitor.sh >/dev/null 2>&1

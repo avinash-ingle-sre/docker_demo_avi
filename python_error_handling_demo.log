@@ -1,0 +1,39 @@
+2026-01-10 16:15:18,030 [INFO] Demo started
+2026-01-10 16:15:18,031 [INFO] Acquiring resource: demo-db
+2026-01-10 16:15:18,031 [INFO] Releasing resource: demo-db
+2026-01-10 16:15:18,031 [ERROR] Config file not found
+Traceback (most recent call last):
+  File "/tmp/python_error_handling_demo.py", line 60, in load_config
+    with open(path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nonexistent_config.json'
+2026-01-10 16:15:18,031 [ERROR] Division by zero attempted
+Traceback (most recent call last):
+  File "/tmp/python_error_handling_demo.py", line 78, in divide
+    return a / b
+ZeroDivisionError: division by zero
+2026-01-10 16:15:18,032 [DEBUG] Failed to convert to int
+Traceback (most recent call last):
+  File "/tmp/python_error_handling_demo.py", line 86, in safe_int
+    return int(s)
+ValueError: invalid literal for int() with base 10: 'abc'
+2026-01-10 16:15:18,032 [DEBUG] flaky_operation generated 0.522
+2026-01-10 16:15:18,032 [WARNING] Attempt 1/4 failed: Transient failure (val=0.522)
+2026-01-10 16:15:18,534 [DEBUG] flaky_operation generated 0.515
+2026-01-10 16:15:18,534 [WARNING] Attempt 2/4 failed: Transient failure (val=0.515)
+2026-01-10 16:15:19,035 [DEBUG] flaky_operation generated 0.382
+2026-01-10 16:15:19,035 [WARNING] Attempt 3/4 failed: Transient failure (val=0.382)
+2026-01-10 16:15:19,536 [DEBUG] flaky_operation generated 0.167
+2026-01-10 16:15:19,536 [WARNING] Attempt 4/4 failed: Transient failure (val=0.167)
+2026-01-10 16:15:19,536 [ERROR] All 4 attempts failed for flaky_operation
+2026-01-10 16:15:19,536 [WARNING] Assertion caught in demonstration: intentional assertion failure
+2026-01-10 16:15:19,537 [ERROR] Captured traceback for analysis:
+Traceback (most recent call last):
+  File "/tmp/python_error_handling_demo.py", line 115, in show_traceback_demo
+    outer()
+  File "/tmp/python_error_handling_demo.py", line 114, in outer
+    inner()
+  File "/tmp/python_error_handling_demo.py", line 112, in inner
+    raise ValueError("Inner error for traceback demo")
+ValueError: Inner error for traceback demo
+
+2026-01-10 16:15:19,537 [INFO] Demo finished

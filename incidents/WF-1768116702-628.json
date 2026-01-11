@@ -1,0 +1,7 @@
+{
+  "id": "WF-1768116702-628",
+  "service": "payment-api", 
+  "detected_at": "2026-01-11T07:31:42Z",
+  "status": "resolved",
+  "severity": "P1-HIGH"
+}

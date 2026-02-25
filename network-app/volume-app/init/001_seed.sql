@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS notes(id SERIAL PRIMARY KEY, body TEXT NOT NULL);
+INSERT INTO notes(body) VALUES ('hello-from-seed');

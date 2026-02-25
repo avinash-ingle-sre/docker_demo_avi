@@ -1,0 +1,19 @@
+services:
+  proxy:
+    image: nginx:alpine
+    networks:
+      - frontend
+      - backend
+  webapp:
+    image: nginxdemos/hello
+    networks:
+      - frontend
+  api:
+    image: busybox
+    command: "sleep 3600"
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:

@@ -1,44 +1,26 @@
-ubernetes Networking & Services Lab
-This project demonstrates a practical hands-on exercise performed on a Kind (Kubernetes in Docker) cluster. The goal was to understand Pod communication, Label selectors, and different Service types in Kubernetes.
+# Production-Grade Containers & Kubernetes Deployments
 
-What I did in this Lab (Flow)
-Cluster Setup: Created a multi-node Kubernetes cluster named devops-lab using Kind.
+Hands-on repository containing microservices architecture patterns, multi-stage Docker builds, Kubernetes manifests, and Istio service mesh configurations.
 
-Pod Creation:
+---
 
-Deployed an Nginx web server pod (web-server) with labels app=web.
+## 📂 Repository Index
 
-Later, deployed version-specific pods (web-v1, web-v2) to test granular traffic routing.
+| Component | Technology Stack | Description |
+| :--- | :--- | :--- |
+| **`gcp-boutique-microservices/`** | GKE, Istio, Skaffold, K8s | Complete 10-tier microservices application deployment with traffic routing and automated build triggers |
+| **`microservice-k8s/`** | Python (Flask), Docker, K8s | Resilient order microservice with non-root security, resource limits, and health probes |
+| **`compose-app/`** | Docker Compose | Multi-container local orchestration setup |
+| **`gke-kubernetes-core/`** | Kubernetes Core Objects | Production pods, services, and ingress configurations |
 
-Service Connectivity:
+---
 
-ClusterIP: Created a service called web-app to allow internal communication within the cluster.
+## 🚀 Key Architectural Highlights
+* **Service Mesh:** Istio VirtualServices, Gateways, and egress whitelisting for Google APIs.
+* **Declarative Deployments:** Highly available multi-replica services with strict CPU/memory requests and limits.
+* **Developer Workflow:** Continuous development loop configured via `skaffold.yaml` and GCP Cloud Build pipelines.
 
-Label Selectors: Used kubectl patch to dynamically update service selectors, ensuring the service only routes traffic to pods with matching labels (app=web).
+---
 
-NodePort: Exposed the application externally using a NodePort service (web-nodeport), making the web server accessible via the Node's IP and a specific port (31038).
-
-Verification:
-
-Used temporary busybox pods to run wget commands.
-
-Verified that the web-service correctly returns the Nginx welcome page.
-
-Confirmed that Endpoints are automatically updated when new pods with matching labels are added.
-
-Key Files
-web-app-svc.yaml: Configuration for internal ClusterIP service.
-
-web-nodeport-svc.yaml: Configuration for external NodePort access.
-
-web-pods.yaml: Manifest of the running Nginx pods.
-
-How to use
-Apply the manifests:
-
-Bash
-kubectl apply -f .
-Verify endpoints:
-
-Bash
-kubectl get endpoints web-app
+## 👤 Maintainer
+* **Avinash Ingle** - *Site Reliability & Cloud Operations Engineer*

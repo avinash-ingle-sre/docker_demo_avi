@@ -1,26 +1,17 @@
-# Production-Grade Containers & Kubernetes Deployments
+# DevOps & SRE Practical Labs
 
-Hands-on repository containing microservices architecture patterns, multi-stage Docker builds, Kubernetes manifests, and Istio service mesh configurations.
-
----
-
-## 📂 Repository Index
-
-| Component | Technology Stack | Description |
-| :--- | :--- | :--- |
-| **`gcp-boutique-microservices/`** | GKE, Istio, Skaffold, K8s | Complete 10-tier microservices application deployment with traffic routing and automated build triggers |
-| **`microservice-k8s/`** | Python (Flask), Docker, K8s | Resilient order microservice with non-root security, resource limits, and health probes |
-| **`compose-app/`** | Docker Compose | Multi-container local orchestration setup |
-| **`gke-kubernetes-core/`** | Kubernetes Core Objects | Production pods, services, and ingress configurations |
+Production architectures, microservices deployments, and cloud observability implementations.
 
 ---
 
-## 🚀 Key Architectural Highlights
-* **Service Mesh:** Istio VirtualServices, Gateways, and egress whitelisting for Google APIs.
-* **Declarative Deployments:** Highly available multi-replica services with strict CPU/memory requests and limits.
-* **Developer Workflow:** Continuous development loop configured via `skaffold.yaml` and GCP Cloud Build pipelines.
+## 📂 Repository Layout
+
+* **`gcp-boutique-microservices/`** - 10-tier GKE application, Istio Service Mesh, and CI/CD pipelines.
+* **`microservice-k8s/`** - Containerized Flask order microservice with Kubernetes health probes and limits.
+* **`gmp-observability-lab/`** - Google Managed Service for Prometheus (GMP), PodMonitoring CRDs, and Node Exporter.
+* **`compose-app/`** - Multi-container orchestration setups.
 
 ---
 
-## 👤 Maintainer
-* **Avinash Ingle** - *Site Reliability & Cloud Operations Engineer*
+## 👤 Author
+* **Avinash Ingle** - *Site Reliability Engineer*
